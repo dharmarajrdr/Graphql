@@ -1,0 +1,2 @@
+# Graphql
+Spring Boot + Graphql
