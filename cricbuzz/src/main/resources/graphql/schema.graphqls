@@ -1,0 +1,33 @@
+type Player {
+    id: ID
+    name: String
+    role: Role
+    team: Team
+}
+
+enum Team {
+    RCB
+    CSK
+    RR
+    SRH
+    MI
+    DC
+}
+
+enum Role {
+    BATSMAN
+    BOWLER
+    ALLROUNDER
+    WICKETKEEPER
+}
+
+# Read operations
+type Query {
+    findAlls: [Player]
+    findAllByTeam(team: Team): [Player]
+}
+
+# Write operations
+type Mutation {
+    save(name: String, role: Role, team: Team): Player
+}
